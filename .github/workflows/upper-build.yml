@@ -19,17 +19,15 @@ jobs:
       - run: pwd && ls -al
       - run: go version
       - uses: actions/setup-go@v5
-        with:
-           go-version: '1.24'
-      - run: go version
-      #     go-version-file: ./upper/go.mod
-      #     cache-dependency-path: ./upper/go.sum
-      # - run: go mod download
-      #   working-directory: upper
-      # - run: |
-      #     ls
-      #     go build
-      #     ls
-      #     go test
-      #   working-directory: upper
-      #   name: build and test
+        with:           
+           go-version-file: ./upper/go.mod
+           cache-dependency-path: ./upper/go.sum
+      - run: go mod download
+        working-directory: upper
+      - run: |
+          ls
+          go build
+          ls
+          go testcheckout
+        working-directory: upper
+        name: build and test
