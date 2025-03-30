@@ -1,10 +1,10 @@
 name: api-build
 
 on:
-  push:
-    paths:
-      - ".github/workflows/api-build.yml"
-      - "api/**"
+  # push:
+  #   paths:
+  #     - ".github/workflows/api-build.yml"
+  #     - "api/**"
   workflow_dispatch: # manual
 
 jobs:
