@@ -13,14 +13,15 @@ jobs:
     # runs-on: self-hosted
     # runs-on: self-hosted
     steps:
+      
+      - run: pwd && ls -al
+      - uses: actions/checkout@v4
+      - run: pwd && ls -al
       - run: go version
-      # - run: pwd && ls -al
-      # - uses: actions/checkout@v4
-      # - run: pwd && ls -al
-      # # - run: go version
-      # - uses: actions/setup-go@v5
-      #   with:
-      #     # go-version: '1.22'
+      - uses: actions/setup-go@v5
+        with:
+           go-version: '1.24'
+      - run: go version
       #     go-version-file: ./upper/go.mod
       #     cache-dependency-path: ./upper/go.sum
       # - run: go mod download
