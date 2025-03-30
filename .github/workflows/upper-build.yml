@@ -29,5 +29,6 @@ jobs:
           go build
           ls
           go test -v
+          ./upper 'Hi there!'
         working-directory: upper
         name: build and test
