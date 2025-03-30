@@ -28,6 +28,6 @@ jobs:
           ls
           go build
           ls
-          go testcheckout
+          go test -v
         working-directory: upper
         name: build and test
